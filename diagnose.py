@@ -30,7 +30,7 @@ if connection.is_connected():
     check_value(obd.commands.INTAKE_PRESSURE, 10, 100, "Intake Pressure / ضغط السحب", "kPa")
     check_value(obd.commands.O2_S1_WR_CURRENT, -1, 1, "Oxygen Sensor / مستشعر الأكسجين", "mA")
 
- 
+    # Read error codes
     # قراءة رموز الأخطاء
     dtc_response = connection.query(obd.commands.GET_DTC)
     if dtc_response.value:
